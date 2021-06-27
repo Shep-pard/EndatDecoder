@@ -1,0 +1,703 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 13
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L stmbl:SP3485 U9
+U 1 1 565DDC9B
+P 5450 2800
+AR Path="/565DDC9B" Ref="U9"  Part="1" 
+AR Path="/56590966/56591919/565DDC9B" Ref="U9"  Part="1" 
+AR Path="/60DAA7B2/565DDC9B" Ref="U7"  Part="1" 
+AR Path="/60F6C5FC/565DDC9B" Ref="U?"  Part="1" 
+AR Path="/60F6CF4C/565DDC9B" Ref="U?"  Part="1" 
+AR Path="/60F6DB7C/565DDC9B" Ref="U9"  Part="1" 
+AR Path="/60F6E279/565DDC9B" Ref="U11"  Part="1" 
+F 0 "U7" H 5150 3150 50  0000 L CNN
+F 1 "SN65176B" H 5550 3150 50  0000 L CNN
+F 2 "stmbl:SOIC-8-N" H 5450 2800 50  0000 C CIN
+F 3 "" H 5450 2800 60  0000 C CNN
+F 4 "SN65176B" H 5150 3250 50  0001 C CNN "Manufacturer No"
+F 5 "" H 5450 2800 60  0001 C CNN "InternalName"
+F 6 "" H 5450 2800 60  0001 C CNN "Voltage"
+F 7 "" H 5450 2800 60  0001 C CNN "Source"
+F 8 "" H 5450 2800 60  0001 C CNN "Tolerance"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "Texas Instruments" H 0   0   50  0001 C CNN "Manufacturer"
+	1    5450 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L stmbl:R R36
+U 1 1 565DDCA1
+P 4900 2800
+AR Path="/60DAA7B2/565DDCA1" Ref="R36"  Part="1" 
+AR Path="/60F6C5FC/565DDCA1" Ref="R?"  Part="1" 
+AR Path="/60F6CF4C/565DDCA1" Ref="R?"  Part="1" 
+AR Path="/60F6DB7C/565DDCA1" Ref="R47"  Part="1" 
+AR Path="/60F6E279/565DDCA1" Ref="R58"  Part="1" 
+F 0 "R36" V 4980 2800 50  0000 C CNN
+F 1 "1k" V 4900 2800 50  0000 C CNN
+F 2 "stmbl:R_0603" V 4830 2800 30  0001 C CNN
+F 3 "" H 4900 2800 30  0000 C CNN
+F 4 "1%" H 4980 2900 50  0001 C CNN "Tolerance"
+F 5 "" H 4900 2800 30  0001 C CNN "InternalName"
+F 6 "" H 4900 2800 30  0001 C CNN "Manufacturer No"
+F 7 "" H 4900 2800 30  0001 C CNN "Voltage"
+F 8 "" H 4900 2800 30  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    4900 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:C C25
+U 1 1 565DDCA7
+P 6500 2800
+AR Path="/60DAA7B2/565DDCA7" Ref="C25"  Part="1" 
+AR Path="/60F6C5FC/565DDCA7" Ref="C?"  Part="1" 
+AR Path="/60F6CF4C/565DDCA7" Ref="C?"  Part="1" 
+AR Path="/60F6DB7C/565DDCA7" Ref="C29"  Part="1" 
+AR Path="/60F6E279/565DDCA7" Ref="C33"  Part="1" 
+F 0 "C25" H 6525 2900 50  0000 L CNN
+F 1 "100n" H 6525 2700 50  0000 L CNN
+F 2 "stmbl:C_0603" H 6538 2650 30  0001 C CNN
+F 3 "" H 6500 2800 60  0000 C CNN
+F 4 "X5R" H 6525 3000 50  0001 C CNN "Tolerance"
+F 5 "50V" H 6500 2800 50  0001 C CNN "Voltage"
+F 6 "" H 6500 2800 60  0001 C CNN "InternalName"
+F 7 "" H 6500 2800 60  0001 C CNN "Manufacturer No"
+F 8 "" H 6500 2800 60  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    6500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:GND #PWR0145
+U 1 1 565DDCB0
+P 5450 3300
+AR Path="/60DAA7B2/565DDCB0" Ref="#PWR0145"  Part="1" 
+AR Path="/60F6C5FC/565DDCB0" Ref="#PWR?"  Part="1" 
+AR Path="/60F6CF4C/565DDCB0" Ref="#PWR?"  Part="1" 
+AR Path="/60F6DB7C/565DDCB0" Ref="#PWR0156"  Part="1" 
+AR Path="/60F6E279/565DDCB0" Ref="#PWR0167"  Part="1" 
+F 0 "#PWR0167" H 5450 3050 50  0001 C CNN
+F 1 "GND" H 5450 3150 50  0000 C CNN
+F 2 "" H 5450 3300 60  0000 C CNN
+F 3 "" H 5450 3300 60  0000 C CNN
+	1    5450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:SP3485 U10
+U 1 1 565DDF06
+P 5450 4200
+AR Path="/565DDF06" Ref="U10"  Part="1" 
+AR Path="/56590966/56591919/565DDF06" Ref="U10"  Part="1" 
+AR Path="/60DAA7B2/565DDF06" Ref="U8"  Part="1" 
+AR Path="/60F6C5FC/565DDF06" Ref="U?"  Part="1" 
+AR Path="/60F6CF4C/565DDF06" Ref="U?"  Part="1" 
+AR Path="/60F6DB7C/565DDF06" Ref="U10"  Part="1" 
+AR Path="/60F6E279/565DDF06" Ref="U12"  Part="1" 
+F 0 "U8" H 5150 4550 50  0000 L CNN
+F 1 "SN65176B" H 5550 4550 50  0000 L CNN
+F 2 "stmbl:SOIC-8-N" H 5450 4200 50  0000 C CIN
+F 3 "" H 5450 4200 60  0000 C CNN
+F 4 "SN65176B" H 5150 4650 50  0001 C CNN "Manufacturer No"
+F 5 "" H 5450 4200 60  0001 C CNN "InternalName"
+F 6 "" H 5450 4200 60  0001 C CNN "Voltage"
+F 7 "" H 5450 4200 60  0001 C CNN "Source"
+F 8 "" H 5450 4200 60  0001 C CNN "Tolerance"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "Texas Instruments" H 0   0   50  0001 C CNN "Manufacturer"
+	1    5450 4200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L stmbl:R R39
+U 1 1 565DDF0C
+P 4900 4200
+AR Path="/60DAA7B2/565DDF0C" Ref="R39"  Part="1" 
+AR Path="/60F6C5FC/565DDF0C" Ref="R?"  Part="1" 
+AR Path="/60F6CF4C/565DDF0C" Ref="R?"  Part="1" 
+AR Path="/60F6DB7C/565DDF0C" Ref="R50"  Part="1" 
+AR Path="/60F6E279/565DDF0C" Ref="R61"  Part="1" 
+F 0 "R39" V 4980 4200 50  0000 C CNN
+F 1 "1k" V 4900 4200 50  0000 C CNN
+F 2 "stmbl:R_0603" V 4830 4200 30  0001 C CNN
+F 3 "" H 4900 4200 30  0000 C CNN
+F 4 "1%" H 4980 4300 50  0001 C CNN "Tolerance"
+F 5 "" H 4900 4200 30  0001 C CNN "InternalName"
+F 6 "" H 4900 4200 30  0001 C CNN "Manufacturer No"
+F 7 "" H 4900 4200 30  0001 C CNN "Voltage"
+F 8 "" H 4900 4200 30  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    4900 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:C C26
+U 1 1 565DDF12
+P 6500 4200
+AR Path="/60DAA7B2/565DDF12" Ref="C26"  Part="1" 
+AR Path="/60F6C5FC/565DDF12" Ref="C?"  Part="1" 
+AR Path="/60F6CF4C/565DDF12" Ref="C?"  Part="1" 
+AR Path="/60F6DB7C/565DDF12" Ref="C30"  Part="1" 
+AR Path="/60F6E279/565DDF12" Ref="C34"  Part="1" 
+F 0 "C26" H 6525 4300 50  0000 L CNN
+F 1 "100n" H 6525 4100 50  0000 L CNN
+F 2 "stmbl:C_0603" H 6538 4050 30  0001 C CNN
+F 3 "" H 6500 4200 60  0000 C CNN
+F 4 "X5R" H 6525 4400 50  0001 C CNN "Tolerance"
+F 5 "50V" H 6525 4400 50  0001 C CNN "Voltage"
+F 6 "" H 6500 4200 60  0001 C CNN "InternalName"
+F 7 "" H 6500 4200 60  0001 C CNN "Manufacturer No"
+F 8 "" H 6500 4200 60  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    6500 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:GND #PWR0146
+U 1 1 565DDF1B
+P 5450 4700
+AR Path="/60DAA7B2/565DDF1B" Ref="#PWR0146"  Part="1" 
+AR Path="/60F6C5FC/565DDF1B" Ref="#PWR?"  Part="1" 
+AR Path="/60F6CF4C/565DDF1B" Ref="#PWR?"  Part="1" 
+AR Path="/60F6DB7C/565DDF1B" Ref="#PWR0157"  Part="1" 
+AR Path="/60F6E279/565DDF1B" Ref="#PWR0168"  Part="1" 
+F 0 "#PWR0168" H 5450 4450 50  0001 C CNN
+F 1 "GND" H 5450 4550 50  0000 C CNN
+F 2 "" H 5450 4700 60  0000 C CNN
+F 3 "" H 5450 4700 60  0000 C CNN
+	1    5450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:R R35
+U 1 1 56F9E212
+P 4900 2400
+AR Path="/60DAA7B2/56F9E212" Ref="R35"  Part="1" 
+AR Path="/60F6C5FC/56F9E212" Ref="R?"  Part="1" 
+AR Path="/60F6CF4C/56F9E212" Ref="R?"  Part="1" 
+AR Path="/60F6DB7C/56F9E212" Ref="R46"  Part="1" 
+AR Path="/60F6E279/56F9E212" Ref="R57"  Part="1" 
+F 0 "R35" V 4980 2400 50  0000 C CNN
+F 1 "10k" V 4900 2400 50  0000 C CNN
+F 2 "stmbl:R_0603" V 4830 2400 30  0001 C CNN
+F 3 "" H 4900 2400 30  0000 C CNN
+F 4 "1%" H 4980 2500 50  0001 C CNN "Tolerance"
+F 5 "" H 4900 2400 30  0001 C CNN "InternalName"
+F 6 "" H 4900 2400 30  0001 C CNN "Manufacturer No"
+F 7 "" H 4900 2400 30  0001 C CNN "Voltage"
+F 8 "" H 4900 2400 30  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    4900 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:R R37
+U 1 1 56F9E5E6
+P 4900 3200
+AR Path="/60DAA7B2/56F9E5E6" Ref="R37"  Part="1" 
+AR Path="/60F6C5FC/56F9E5E6" Ref="R?"  Part="1" 
+AR Path="/60F6CF4C/56F9E5E6" Ref="R?"  Part="1" 
+AR Path="/60F6DB7C/56F9E5E6" Ref="R48"  Part="1" 
+AR Path="/60F6E279/56F9E5E6" Ref="R59"  Part="1" 
+F 0 "R37" V 4980 3200 50  0000 C CNN
+F 1 "10k" V 4900 3200 50  0000 C CNN
+F 2 "stmbl:R_0603" V 4830 3200 30  0001 C CNN
+F 3 "" H 4900 3200 30  0000 C CNN
+F 4 "1%" H 4980 3300 50  0001 C CNN "Tolerance"
+F 5 "" H 4900 3200 30  0001 C CNN "InternalName"
+F 6 "" H 4900 3200 30  0001 C CNN "Manufacturer No"
+F 7 "" H 4900 3200 30  0001 C CNN "Voltage"
+F 8 "" H 4900 3200 30  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    4900 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:R R38
+U 1 1 56F9EA0F
+P 4900 3800
+AR Path="/60DAA7B2/56F9EA0F" Ref="R38"  Part="1" 
+AR Path="/60F6C5FC/56F9EA0F" Ref="R?"  Part="1" 
+AR Path="/60F6CF4C/56F9EA0F" Ref="R?"  Part="1" 
+AR Path="/60F6DB7C/56F9EA0F" Ref="R49"  Part="1" 
+AR Path="/60F6E279/56F9EA0F" Ref="R60"  Part="1" 
+F 0 "R38" V 4980 3800 50  0000 C CNN
+F 1 "10k" V 4900 3800 50  0000 C CNN
+F 2 "stmbl:R_0603" V 4830 3800 30  0001 C CNN
+F 3 "" H 4900 3800 30  0000 C CNN
+F 4 "1%" H 4980 3900 50  0001 C CNN "Tolerance"
+F 5 "" H 4900 3800 30  0001 C CNN "InternalName"
+F 6 "" H 4900 3800 30  0001 C CNN "Manufacturer No"
+F 7 "" H 4900 3800 30  0001 C CNN "Voltage"
+F 8 "" H 4900 3800 30  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    4900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:R R40
+U 1 1 56F9EFAF
+P 4900 4600
+AR Path="/60DAA7B2/56F9EFAF" Ref="R40"  Part="1" 
+AR Path="/60F6C5FC/56F9EFAF" Ref="R?"  Part="1" 
+AR Path="/60F6CF4C/56F9EFAF" Ref="R?"  Part="1" 
+AR Path="/60F6DB7C/56F9EFAF" Ref="R51"  Part="1" 
+AR Path="/60F6E279/56F9EFAF" Ref="R62"  Part="1" 
+F 0 "R40" V 4980 4600 50  0000 C CNN
+F 1 "10k" V 4900 4600 50  0000 C CNN
+F 2 "stmbl:R_0603" V 4830 4600 30  0001 C CNN
+F 3 "" H 4900 4600 30  0000 C CNN
+F 4 "1%" H 4980 4700 50  0001 C CNN "Tolerance"
+F 5 "" H 4900 4600 30  0001 C CNN "InternalName"
+F 6 "" H 4900 4600 30  0001 C CNN "Manufacturer No"
+F 7 "" H 4900 4600 30  0001 C CNN "Voltage"
+F 8 "" H 4900 4600 30  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    4900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:R R41
+U 1 1 57758F9B
+P 6900 3000
+AR Path="/60DAA7B2/57758F9B" Ref="R41"  Part="1" 
+AR Path="/60F6C5FC/57758F9B" Ref="R?"  Part="1" 
+AR Path="/60F6CF4C/57758F9B" Ref="R?"  Part="1" 
+AR Path="/60F6DB7C/57758F9B" Ref="R52"  Part="1" 
+AR Path="/60F6E279/57758F9B" Ref="R63"  Part="1" 
+F 0 "R41" V 6980 3000 50  0000 C CNN
+F 1 "1k" V 6900 3000 50  0000 C CNN
+F 2 "stmbl:R_0603" V 6830 3000 30  0001 C CNN
+F 3 "" H 6900 3000 30  0000 C CNN
+F 4 "" H 6900 3000 50  0001 C CNN "Manufacturer No"
+F 5 "" H 6900 3000 50  0001 C CNN "Voltage"
+F 6 "" H 6900 3000 50  0001 C CNN "Source"
+F 7 "1%" H 6980 3100 50  0001 C CNN "Tolerance"
+F 8 "" V 6900 3000 50  0001 C CNN "Manufacturer"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "InternalName"
+	1    6900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:GND #PWR0150
+U 1 1 57758FA1
+P 6900 3200
+AR Path="/60DAA7B2/57758FA1" Ref="#PWR0150"  Part="1" 
+AR Path="/60F6C5FC/57758FA1" Ref="#PWR?"  Part="1" 
+AR Path="/60F6CF4C/57758FA1" Ref="#PWR?"  Part="1" 
+AR Path="/60F6DB7C/57758FA1" Ref="#PWR0161"  Part="1" 
+AR Path="/60F6E279/57758FA1" Ref="#PWR0172"  Part="1" 
+F 0 "#PWR0172" H 6900 2950 50  0001 C CNN
+F 1 "GND" H 6900 3050 50  0000 C CNN
+F 2 "" H 6900 3200 60  0000 C CNN
+F 3 "" H 6900 3200 60  0000 C CNN
+	1    6900 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:R R42
+U 1 1 577591B1
+P 6900 4400
+AR Path="/60DAA7B2/577591B1" Ref="R42"  Part="1" 
+AR Path="/60F6C5FC/577591B1" Ref="R?"  Part="1" 
+AR Path="/60F6CF4C/577591B1" Ref="R?"  Part="1" 
+AR Path="/60F6DB7C/577591B1" Ref="R53"  Part="1" 
+AR Path="/60F6E279/577591B1" Ref="R64"  Part="1" 
+F 0 "R42" V 6980 4400 50  0000 C CNN
+F 1 "1k" V 6900 4400 50  0000 C CNN
+F 2 "stmbl:R_0603" V 6830 4400 30  0001 C CNN
+F 3 "" H 6900 4400 30  0000 C CNN
+F 4 "1%" H 6980 4500 50  0001 C CNN "Tolerance"
+F 5 "" H 6900 4400 30  0001 C CNN "InternalName"
+F 6 "" H 6900 4400 30  0001 C CNN "Manufacturer No"
+F 7 "" H 6900 4400 30  0001 C CNN "Voltage"
+F 8 "" H 6900 4400 30  0001 C CNN "Source"
+F 9 "" H 0   0   50  0001 C CNN "Description"
+F 10 "" H 0   0   50  0001 C CNN "Manufacturer"
+	1    6900 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:GND #PWR0151
+U 1 1 577591B7
+P 6900 4600
+AR Path="/60DAA7B2/577591B7" Ref="#PWR0151"  Part="1" 
+AR Path="/60F6C5FC/577591B7" Ref="#PWR?"  Part="1" 
+AR Path="/60F6CF4C/577591B7" Ref="#PWR?"  Part="1" 
+AR Path="/60F6DB7C/577591B7" Ref="#PWR0162"  Part="1" 
+AR Path="/60F6E279/577591B7" Ref="#PWR0173"  Part="1" 
+F 0 "#PWR0173" H 6900 4350 50  0001 C CNN
+F 1 "GND" H 6900 4450 50  0000 C CNN
+F 2 "" H 6900 4600 60  0000 C CNN
+F 3 "" H 6900 4600 60  0000 C CNN
+	1    6900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:INDUCTOR L4
+U 1 1 57AD7F96
+P 7700 2350
+AR Path="/60DAA7B2/57AD7F96" Ref="L4"  Part="1" 
+AR Path="/60F6C5FC/57AD7F96" Ref="L?"  Part="1" 
+AR Path="/60F6CF4C/57AD7F96" Ref="L?"  Part="1" 
+AR Path="/60F6DB7C/57AD7F96" Ref="L5"  Part="1" 
+AR Path="/60F6E279/57AD7F96" Ref="L6"  Part="1" 
+F 0 "L4" V 7650 2350 50  0000 C CNN
+F 1 "220r 700mA" V 7800 2350 50  0000 C CNN
+F 2 "stmbl:R_0603" H 7700 2350 50  0001 C CNN
+F 3 "" H 7700 2350 50  0000 C CNN
+F 4 "BLM18AG221SN1" H 7650 2450 50  0001 C CNN "Manufacturer No"
+F 5 "https://de.aliexpress.com/item/500-PCS-LOT-patch-magnetic-bead-FB-BLM18AG221SN1-0603-220-r-0-5-A-magnetic-beads/32675343247.html" H 7700 2350 50  0001 C CNN "Source"
+F 6 "" H 7700 2350 50  0001 C CNN "InternalName"
+F 7 "" H 7700 2350 50  0001 C CNN "Voltage"
+F 8 "" H 7700 2350 50  0001 C CNN "Tolerance"
+F 9 "" H 0   1400 50  0001 C CNN "Description"
+F 10 "Murata" H 0   1400 50  0001 C CNN "Manufacturer"
+	1    7700 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L stmbl:C C27
+U 1 1 57AD80BE
+P 8100 2600
+AR Path="/60DAA7B2/57AD80BE" Ref="C27"  Part="1" 
+AR Path="/60F6C5FC/57AD80BE" Ref="C?"  Part="1" 
+AR Path="/60F6CF4C/57AD80BE" Ref="C?"  Part="1" 
+AR Path="/60F6DB7C/57AD80BE" Ref="C31"  Part="1" 
+AR Path="/60F6E279/57AD80BE" Ref="C35"  Part="1" 
+F 0 "C27" H 8125 2700 50  0000 L CNN
+F 1 "100n" H 8125 2500 50  0000 L CNN
+F 2 "stmbl:C_0603" H 8138 2450 30  0001 C CNN
+F 3 "" H 8100 2600 60  0000 C CNN
+F 4 "X5R" H 8125 2800 50  0001 C CNN "Tolerance"
+F 5 "50V" H 8125 2800 50  0001 C CNN "Voltage"
+F 6 "" H 8100 2600 60  0001 C CNN "InternalName"
+F 7 "" H 8100 2600 60  0001 C CNN "Manufacturer No"
+F 8 "" H 8100 2600 60  0001 C CNN "Source"
+F 9 "" H 0   1400 50  0001 C CNN "Description"
+F 10 "" H 0   1400 50  0001 C CNN "Manufacturer"
+	1    8100 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:GND #PWR0152
+U 1 1 57AD9057
+P 8100 2850
+AR Path="/60DAA7B2/57AD9057" Ref="#PWR0152"  Part="1" 
+AR Path="/60F6C5FC/57AD9057" Ref="#PWR?"  Part="1" 
+AR Path="/60F6CF4C/57AD9057" Ref="#PWR?"  Part="1" 
+AR Path="/60F6DB7C/57AD9057" Ref="#PWR0163"  Part="1" 
+AR Path="/60F6E279/57AD9057" Ref="#PWR0174"  Part="1" 
+F 0 "#PWR0174" H 8100 2600 50  0001 C CNN
+F 1 "GND" H 8100 2700 50  0000 C CNN
+F 2 "" H 8100 2850 60  0000 C CNN
+F 3 "" H 8100 2850 60  0000 C CNN
+	1    8100 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L stmbl:+5F #PWR0153
+U 1 1 57D6FF89
+P 8100 2250
+AR Path="/60DAA7B2/57D6FF89" Ref="#PWR0153"  Part="1" 
+AR Path="/60F6C5FC/57D6FF89" Ref="#PWR?"  Part="1" 
+AR Path="/60F6CF4C/57D6FF89" Ref="#PWR?"  Part="1" 
+AR Path="/60F6DB7C/57D6FF89" Ref="#PWR0164"  Part="1" 
+AR Path="/60F6E279/57D6FF89" Ref="#PWR0175"  Part="1" 
+F 0 "#PWR0175" H 8100 2100 50  0001 C CNN
+F 1 "+5F" H 8100 2390 50  0000 C CNN
+F 2 "" H 8100 2250 50  0000 C CNN
+F 3 "" H 8100 2250 50  0000 C CNN
+	1    8100 2250
+	1    0    0    -1  
+$EndComp
+Text HLabel 6250 2600 2    60   Input ~ 0
+CLK
+Text HLabel 5950 2800 2    60   Input ~ 0
+CLK_EN
+Text HLabel 6250 4000 2    60   BiDi ~ 0
+MOSI
+Text HLabel 5950 4200 2    60   Input ~ 0
+MOSI_EN
+Text HLabel 6950 4200 2    60   Input ~ 0
+MOSI_EN
+Text HLabel 6950 2800 2    60   Input ~ 0
+CLK_EN
+Wire Wire Line
+	5850 2700 5900 2700
+Wire Wire Line
+	5900 2700 5900 2800
+Wire Wire Line
+	5900 2900 5850 2900
+Wire Wire Line
+	5450 3200 5450 3250
+Wire Wire Line
+	5050 2700 5000 2700
+Wire Wire Line
+	5000 2700 5000 2650
+Wire Wire Line
+	5000 2650 4900 2650
+Wire Wire Line
+	5050 2900 5000 2900
+Wire Wire Line
+	5000 2900 5000 2950
+Wire Wire Line
+	5000 2950 4900 2950
+Wire Wire Line
+	6500 3250 6500 2950
+Wire Wire Line
+	5150 3250 5450 3250
+Wire Wire Line
+	6500 2350 6500 2650
+Wire Wire Line
+	5150 2350 5450 2350
+Wire Wire Line
+	5850 2600 6200 2600
+Wire Wire Line
+	5900 2800 5950 2800
+Wire Wire Line
+	6200 3000 5850 3000
+Wire Wire Line
+	5850 4100 5900 4100
+Wire Wire Line
+	5900 4100 5900 4200
+Wire Wire Line
+	5900 4300 5850 4300
+Wire Wire Line
+	5450 4600 5450 4650
+Wire Wire Line
+	5050 4100 5000 4100
+Wire Wire Line
+	5000 4100 5000 4050
+Wire Wire Line
+	5000 4050 4900 4050
+Wire Wire Line
+	5050 4300 5000 4300
+Wire Wire Line
+	5000 4300 5000 4350
+Wire Wire Line
+	5000 4350 4900 4350
+Wire Wire Line
+	6500 4650 6500 4350
+Wire Wire Line
+	5150 4650 5450 4650
+Wire Wire Line
+	6500 3750 6500 4050
+Wire Wire Line
+	7300 3750 6500 3750
+Wire Wire Line
+	5850 4000 6200 4000
+Wire Wire Line
+	5900 4200 5950 4200
+Wire Wire Line
+	6200 4400 5850 4400
+Wire Wire Line
+	3800 2650 3800 3300
+Wire Wire Line
+	4900 4750 4900 4850
+Wire Wire Line
+	4900 4850 5150 4850
+Wire Wire Line
+	5150 4850 5150 4650
+Wire Wire Line
+	4900 4450 4900 4350
+Wire Wire Line
+	4900 4050 4900 3950
+Wire Wire Line
+	4900 3650 4900 3550
+Wire Wire Line
+	4900 3550 5150 3550
+Wire Wire Line
+	5150 3550 5150 3750
+Wire Wire Line
+	4900 3050 4900 2950
+Wire Wire Line
+	4900 3350 4900 3450
+Wire Wire Line
+	4900 3450 5150 3450
+Wire Wire Line
+	5150 3450 5150 3250
+Wire Wire Line
+	4900 2650 4900 2550
+Wire Wire Line
+	4900 2250 4900 2150
+Wire Wire Line
+	4900 2150 5150 2150
+Wire Wire Line
+	5150 2150 5150 2350
+Wire Wire Line
+	6950 2800 6900 2800
+Wire Wire Line
+	6900 2800 6900 2850
+Wire Wire Line
+	6900 3150 6900 3200
+Wire Wire Line
+	6950 4200 6900 4200
+Wire Wire Line
+	6900 4200 6900 4250
+Wire Wire Line
+	6900 4550 6900 4600
+Wire Wire Line
+	5450 2400 5450 2350
+Wire Wire Line
+	5450 3800 5450 3750
+Wire Wire Line
+	8100 2250 8100 2350
+Wire Wire Line
+	8000 2350 8100 2350
+Wire Wire Line
+	7300 2350 7300 3750
+Wire Wire Line
+	8100 2750 8100 2850
+Wire Wire Line
+	6200 3000 6200 2600
+Wire Wire Line
+	6200 4400 6200 4000
+Wire Wire Line
+	5450 3250 5450 3300
+Wire Wire Line
+	5450 3250 6500 3250
+Wire Wire Line
+	5900 2800 5900 2900
+Wire Wire Line
+	5450 3750 5150 3750
+Wire Wire Line
+	5450 4650 5450 4700
+Wire Wire Line
+	5450 4650 6500 4650
+Wire Wire Line
+	5900 4200 5900 4300
+Wire Wire Line
+	4900 2650 3800 2650
+Wire Wire Line
+	4900 2950 3900 2950
+Wire Wire Line
+	6200 2600 6250 2600
+Wire Wire Line
+	6200 4000 6250 4000
+Wire Wire Line
+	5450 2350 6500 2350
+Wire Wire Line
+	8100 2350 8100 2450
+Wire Wire Line
+	7300 2350 7400 2350
+Wire Wire Line
+	6500 3750 5450 3750
+Wire Wire Line
+	6500 2350 7300 2350
+Connection ~ 5450 3250
+Connection ~ 5900 2800
+Connection ~ 5450 3750
+Connection ~ 5450 4650
+Connection ~ 5900 4200
+Connection ~ 4900 2650
+Connection ~ 4900 2950
+Connection ~ 4900 4350
+Connection ~ 4900 4050
+Connection ~ 6200 2600
+Connection ~ 6200 4000
+Connection ~ 5450 2350
+Connection ~ 8100 2350
+Connection ~ 6500 3750
+Connection ~ 7300 2350
+Connection ~ 6500 2350
+$Comp
+L stmbl:GND #PWR0155
+U 1 1 60F53F9E
+P 3600 3950
+AR Path="/60DAA7B2/60F53F9E" Ref="#PWR0155"  Part="1" 
+AR Path="/60F6C5FC/60F53F9E" Ref="#PWR?"  Part="1" 
+AR Path="/60F6CF4C/60F53F9E" Ref="#PWR?"  Part="1" 
+AR Path="/60F6DB7C/60F53F9E" Ref="#PWR0166"  Part="1" 
+AR Path="/60F6E279/60F53F9E" Ref="#PWR0177"  Part="1" 
+F 0 "#PWR0177" H 3600 3700 50  0001 C CNN
+F 1 "GND" H 3600 3800 50  0000 C CNN
+F 2 "" H 3600 3950 60  0000 C CNN
+F 3 "" H 3600 3950 60  0000 C CNN
+	1    3600 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3950 3600 3900
+Wire Wire Line
+	7300 3750 7300 5200
+Wire Wire Line
+	7300 5200 3900 5200
+Wire Wire Line
+	3900 5200 3900 4100
+Connection ~ 7300 3750
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 610F6356
+P 2850 3400
+AR Path="/60DAA7B2/610F6356" Ref="J4"  Part="1" 
+AR Path="/60F6DB7C/610F6356" Ref="J6"  Part="1" 
+AR Path="/60F6E279/610F6356" Ref="J11"  Part="1" 
+F 0 "J4" H 2768 3717 50  0000 C CNN
+F 1 "Conn_01x04" H 2768 3626 50  0000 C CNN
+F 2 "stmbl:TERMINAL_BLOCK_2PIN_3.5" H 2850 3400 50  0001 C CNN
+F 3 "~" H 2850 3400 50  0001 C CNN
+	1    2850 3400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3300 3800 3300
+Wire Wire Line
+	4000 4350 4900 4350
+Wire Wire Line
+	4100 4050 4900 4050
+Wire Wire Line
+	4000 4350 4000 3600
+Wire Wire Line
+	3050 3900 3600 3900
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 611290B4
+P 2850 3900
+AR Path="/60DAA7B2/611290B4" Ref="J5"  Part="1" 
+AR Path="/60F6DB7C/611290B4" Ref="J10"  Part="1" 
+AR Path="/60F6E279/611290B4" Ref="J12"  Part="1" 
+F 0 "J5" H 2768 4217 50  0000 C CNN
+F 1 "Conn_01x04" H 2768 4126 50  0000 C CNN
+F 2 "stmbl:TERMINAL_BLOCK_2PIN_3.5" H 2850 3900 50  0001 C CNN
+F 3 "~" H 2850 3900 50  0001 C CNN
+	1    2850 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3500 3050 3500
+Wire Wire Line
+	3900 2950 3900 3500
+Wire Wire Line
+	4100 3400 3050 3400
+Wire Wire Line
+	4100 3400 4100 4050
+Wire Wire Line
+	4000 3600 3050 3600
+Wire Wire Line
+	3050 4100 3900 4100
+$EndSCHEMATC

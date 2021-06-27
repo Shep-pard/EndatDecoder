@@ -1,0 +1,84 @@
+06-22 22:37:20 replicate_layout.action_replicate_layout 305:Plugin executed on: 'win32'
+06-22 22:37:20 replicate_layout.action_replicate_layout 306:Plugin executed with python version: '2.7.18 (default, Apr 20 2020, 16:57:11)  [GCC 9.3.0 64 bit (AMD64)]'
+06-22 22:37:20 replicate_layout.action_replicate_layout 307:KiCad build version: (5.1.9)-1
+06-22 22:37:20 replicate_layout.action_replicate_layout 308:Replicate layout plugin version: 70 started
+06-22 22:37:20 replicate_layout.action_replicate_layout 340:Preparing replicator with Q1 as a reference
+06-22 22:37:20 replicate_layout.replicatelayout 215:getting project hierarchy from schematics
+06-22 22:37:20 replicate_layout.replicatelayout 217:Project hierarchy looks like:
+{u'6117BBBD': [u'sheet6117BBB9', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\PMOS.sch'], u'60DAA7B2': [u'Endat1', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\Endat.sch'], u'61178AE3': [u'STO2', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\PMOS.sch'], u'60F6E279': [u'Endat3', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\Endat.sch'], u'60D2628F': [u'controller', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\uC.sch'], u'60F6DB7C': [u'Endat2', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\Endat.sch'], u'6105E423': [u'QuadOut3', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\QuadOut.sch'], u'61162786': [u'STO1', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\PMOS.sch'], u'60DDE969': [u'SimpleMotionV2', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\SimpleMotionV2.sch'], u'6105E100': [u'QuadOut2', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\QuadOut.sch'], u'60F76619': [u'QuadOut1', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\QuadOut.sch'], u'60DBB6F1': [u'sserial_1', u'C:\\Users\\Soeren\\Documents\\GitHub\\EndatDecoder\\sserial.sch']}
+06-22 22:37:20 replicate_layout.replicatelayout 225:getting a list of all footprints on board
+06-22 22:37:20 replicate_layout.action_replicate_layout 367:source anchor footprint is u'Q1'
+Located on:[u'SimpleMotionV2', u'STO1']
+With filenames:[u'SimpleMotionV2.sch', u'PMOS.sch']
+With sheet_id:[u'SimpleMotionV2', u'STO1']
+06-22 22:37:20 replicate_layout.action_replicate_layout 371:Corresponding footprints are 
+[(u'Q5', [u'SimpleMotionV2', u'sheet6117BBB9']), (u'Q3', [u'SimpleMotionV2', u'STO2']), (u'Q1', [u'SimpleMotionV2', u'STO1'])]
+06-22 22:37:20 replicate_layout.action_replicate_layout 384:Showing dialog
+06-22 22:37:20 replicate_layout.action_replicate_layout 388:Pcbnew position: wx.Point(-11, -11)
+06-22 22:37:20 replicate_layout.action_replicate_layout 394:Display 0: wx.Rect(0, 0, 3840, 2160)
+06-22 22:37:20 replicate_layout.action_replicate_layout 394:Display 1: wx.Rect(3840, 0, 3840, 2160)
+06-22 22:37:20 replicate_layout.action_replicate_layout 398:Toolbar position: wx.Point(3478, 162)
+06-22 22:37:20 replicate_layout.action_replicate_layout 405:Dialog position: wx.Point(3165, 162)
+06-22 22:37:25 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:u'STO1', file:u'PMOS.sch'
+06-22 22:37:25 replicate_layout.replicatelayout 256:Source sheet path up to the level:[u'SimpleMotionV2', u'STO1']
+06-22 22:37:25 replicate_layout.replicatelayout 260:Footprints on the sheets:
+[u'Q5', u'Q3', u'Q1']
+06-22 22:37:25 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+[u'/60DDE969/6117BBBD/6116CA1D', u'/60DDE969/61178AE3/6116CA1D', u'/60DDE969/61162786/6116CA1D']
+06-22 22:37:25 replicate_layout.replicatelayout 279:All sheets to replicate:
+[[u'SimpleMotionV2', u'sheet6117BBB9'], [u'SimpleMotionV2', u'STO2'], [u'SimpleMotionV2', u'STO1']]
+06-22 22:37:25 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[[u'SimpleMotionV2', u'STO1'], [u'SimpleMotionV2', u'STO2'], [u'SimpleMotionV2', u'sheet6117BBB9']]
+06-22 22:37:25 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[[u'SimpleMotionV2', u'STO2'], [u'SimpleMotionV2', u'sheet6117BBB9']]
+06-22 22:37:32 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:u'STO1', file:u'PMOS.sch'
+06-22 22:37:32 replicate_layout.replicatelayout 256:Source sheet path up to the level:[u'SimpleMotionV2', u'STO1']
+06-22 22:37:32 replicate_layout.replicatelayout 260:Footprints on the sheets:
+[u'Q5', u'Q3', u'Q1']
+06-22 22:37:32 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+[u'/60DDE969/6117BBBD/6116CA1D', u'/60DDE969/61178AE3/6116CA1D', u'/60DDE969/61162786/6116CA1D']
+06-22 22:37:32 replicate_layout.replicatelayout 279:All sheets to replicate:
+[[u'SimpleMotionV2', u'sheet6117BBB9'], [u'SimpleMotionV2', u'STO2'], [u'SimpleMotionV2', u'STO1']]
+06-22 22:37:32 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[[u'SimpleMotionV2', u'STO1'], [u'SimpleMotionV2', u'STO2'], [u'SimpleMotionV2', u'sheet6117BBB9']]
+06-22 22:37:32 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[[u'SimpleMotionV2', u'STO2'], [u'SimpleMotionV2', u'sheet6117BBB9']]
+06-22 22:37:32 replicate_layout.action_replicate_layout 179:Replicating layout
+06-22 22:37:32 replicate_layout.replicatelayout 994:Starting replication of sheets: [[u'SimpleMotionV2', u'STO2'], [u'SimpleMotionV2', u'sheet6117BBB9']]
+on level: [u'SimpleMotionV2', u'STO1']
+with tracks=True, zone=True, text=True, containing=True, remove=False, locked=False
+06-22 22:37:32 root 261:updating GUI message: 'Preparing for replication'
+06-22 22:37:32 root 266:updating GUI with: 0
+06-22 22:37:32 replicate_layout.replicatelayout 556:Getting the list of source footprints
+06-22 22:37:32 replicate_layout.replicatelayout 560:Getting the list of all the remaining footprints
+06-22 22:37:32 replicate_layout.replicatelayout 564:Getting nets local to source footprints
+06-22 22:37:32 replicate_layout.replicatelayout 568:Getting source bounding box
+06-22 22:37:32 root 266:updating GUI with: 37
+06-22 22:37:32 replicate_layout.replicatelayout 572:Getting source tracks
+06-22 22:37:32 replicate_layout.replicatelayout 576:Getting source zones
+06-22 22:37:32 root 266:updating GUI with: 62
+06-22 22:37:32 replicate_layout.replicatelayout 580:Getting source text items
+06-22 22:37:32 replicate_layout.replicatelayout 584:Getting source text items
+06-22 22:37:32 root 261:updating GUI message: 'Replicating footprints'
+06-22 22:37:32 replicate_layout.replicatelayout 590:Replicating footprints
+06-22 22:37:32 replicate_layout.replicatelayout 596:Replicating footprints on sheet [u'SimpleMotionV2', u'STO2']
+06-22 22:37:32 replicate_layout.replicatelayout 596:Replicating footprints on sheet [u'SimpleMotionV2', u'sheet6117BBB9']
+06-22 22:37:32 root 266:updating GUI with: 71
+06-22 22:37:32 root 261:updating GUI message: 'Replicating tracks'
+06-22 22:37:32 replicate_layout.replicatelayout 720:Replicating tracks
+06-22 22:37:32 replicate_layout.replicatelayout 726:Replicating tracks on sheet [u'SimpleMotionV2', u'STO2']
+06-22 22:37:32 replicate_layout.replicatelayout 726:Replicating tracks on sheet [u'SimpleMotionV2', u'sheet6117BBB9']
+06-22 22:37:32 root 261:updating GUI message: 'Replicating zones'
+06-22 22:37:32 replicate_layout.replicatelayout 771:Replicating zones
+06-22 22:37:32 replicate_layout.replicatelayout 778:Replicating zones on sheet [u'SimpleMotionV2', u'STO2']
+06-22 22:37:32 root 266:updating GUI with: 50
+06-22 22:37:32 replicate_layout.replicatelayout 778:Replicating zones on sheet [u'SimpleMotionV2', u'sheet6117BBB9']
+06-22 22:37:32 root 261:updating GUI message: 'Replicating text'
+06-22 22:37:32 replicate_layout.replicatelayout 837:Replicating text
+06-22 22:37:32 replicate_layout.replicatelayout 844:Replicating text on sheet [u'SimpleMotionV2', u'STO2']
+06-22 22:37:32 replicate_layout.replicatelayout 844:Replicating text on sheet [u'SimpleMotionV2', u'sheet6117BBB9']
+06-22 22:37:32 root 261:updating GUI message: 'Replicating drawings'
+06-22 22:37:32 replicate_layout.replicatelayout 868:Replicating drawings
+06-22 22:37:32 replicate_layout.replicatelayout 874:Replicating drawings on sheet [u'SimpleMotionV2', u'STO2']
+06-22 22:37:32 replicate_layout.replicatelayout 874:Replicating drawings on sheet [u'SimpleMotionV2', u'sheet6117BBB9']
+06-22 22:37:32 replicate_layout.action_replicate_layout 201:Replication complete
