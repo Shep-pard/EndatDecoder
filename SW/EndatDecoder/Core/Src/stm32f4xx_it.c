@@ -58,8 +58,6 @@
 /* External variables --------------------------------------------------------*/
 extern SPI_HandleTypeDef hspi1;
 extern SPI_HandleTypeDef hspi2;
-extern SPI_HandleTypeDef hspi3;
-extern TIM_HandleTypeDef htim8;
 extern TIM_HandleTypeDef htim13;
 extern TIM_HandleTypeDef htim14;
 extern UART_HandleTypeDef huart1;
@@ -228,9 +226,7 @@ void SPI1_IRQHandler(void)
 	    rxData[rxCount++] = SPI1->DR;				// receive
 
 	    if(rxCount==4){
-//	  	  while((SPI1->SR & SPI_SR_BSY) == SPI_SR_BSY);
 	  	  SPI1->CR1 &= ~SPI_CR1_SPE; //disable spi
-//	  	  SPI1->CR2 &= ~SPI_CR2_RXNEIE;
 	    }
 
 	    SEGGER_SYSVIEW_RecordExitISR();
@@ -251,9 +247,7 @@ void SPI2_IRQHandler(void)
   rxData2[rxCount2++] = SPI2->DR;				// receive
 
   if(rxCount2==4){
-//	  	  while((SPI1->SR & SPI_SR_BSY) == SPI_SR_BSY);
 	  SPI2->CR1 &= ~SPI_CR1_SPE; //disable spi
-//	  SPI2->CR2 &= ~SPI_CR2_RXNEIE;
   }
 
   SEGGER_SYSVIEW_RecordExitISR();
@@ -296,7 +290,6 @@ void TIM8_UP_TIM13_IRQHandler(void)
   /* USER CODE BEGIN TIM8_UP_TIM13_IRQn 0 */
 
   /* USER CODE END TIM8_UP_TIM13_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim8);
   HAL_TIM_IRQHandler(&htim13);
   /* USER CODE BEGIN TIM8_UP_TIM13_IRQn 1 */
 
@@ -311,14 +304,16 @@ void TIM8_TRG_COM_TIM14_IRQHandler(void)
   /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 0 */
 	SEGGER_SYSVIEW_RecordEnterISR();
   /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim8);
   HAL_TIM_IRQHandler(&htim14);
   /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 1 */
 
 
 
-  startSPI(SPIs[spiCount]);
   spiCount = spiCount ^ 0x1;
+  if(spiCount)
+	  startSPI1();
+  else
+	  startSPI2();
 
 
 
@@ -326,57 +321,72 @@ void TIM8_TRG_COM_TIM14_IRQHandler(void)
   /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 1 */
 }
 
-/**
-  * @brief This function handles SPI3 global interrupt.
-  */
-void SPI3_IRQHandler(void)
-{
-  /* USER CODE BEGIN SPI3_IRQn 0 */
-
-  /* USER CODE END SPI3_IRQn 0 */
-  HAL_SPI_IRQHandler(&hspi3);
-  /* USER CODE BEGIN SPI3_IRQn 1 */
-
-  /* USER CODE END SPI3_IRQn 1 */
-}
-
 /* USER CODE BEGIN 1 */
 
 
 
-void startSPI(SPI_TypeDef* SPI){
-
-	SPI->CR1 &= ~SPI_CR1_SPE;//disable spi
-	SPI->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_CPHA | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BAUDRATEPRESCALER_64;
-
-	if(SPI == SPI1){
-		HAL_GPIO_WritePin(SPI1_EN1_GPIO_Port, SPI1_EN1_Pin, GPIO_PIN_SET);	// set data rs485 to tx
-	} else {
-		HAL_GPIO_WritePin(SPI2_EN1_GPIO_Port, SPI2_EN1_Pin, GPIO_PIN_SET);	// set data rs485 to tx
-	}
 
 
-	SPI->CR1 |= SPI_CR1_BIDIOE;//enable output
-	SPI->CR1 |= SPI_CR1_SPE;//enable spi
 
-	SPI->DR = txData[0];
-	while(!(SPI->SR & SPI_SR_TXE));
-	while(SPI->SR & SPI_SR_BSY);
 
-	SPI->CR1 &= ~SPI_CR1_BIDIOE;//disable output, this activates the clock
-	if(SPI == SPI1){
-		HAL_GPIO_WritePin(SPI1_EN1_GPIO_Port, SPI1_EN1_Pin, GPIO_PIN_RESET);	// set data rs485 to rx
-	} else {
-		HAL_GPIO_WritePin(SPI2_EN1_GPIO_Port, SPI2_EN1_Pin, GPIO_PIN_RESET);	// set data rs485 to tx
-	}
+void startSPI1(){
 
-	SPI->CR1 &= ~SPI_CR1_SPE;//disable spi
-	SPI->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BAUDRATEPRESCALER_64;
+	SPI1->CR1 &= ~SPI_CR1_SPE;//disable spi
+	SPI1->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_CPHA | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BAUDRATEPRESCALER_64;
+
+	HAL_GPIO_WritePin(SPI1_EN1_GPIO_Port, SPI1_EN1_Pin, GPIO_PIN_SET);	// set data rs485 to tx
+
+
+
+	SPI1->CR1 |= SPI_CR1_BIDIOE;//enable output
+	SPI1->CR1 |= SPI_CR1_SPE;//enable spi
+
+	SPI1->DR = txData[0];
+	while(!(SPI1->SR & SPI_SR_TXE));
+	while(SPI1->SR & SPI_SR_BSY);
+
+	SPI1->CR1 &= ~SPI_CR1_BIDIOE;//disable output, this activates the clock
+	HAL_GPIO_WritePin(SPI1_EN1_GPIO_Port, SPI1_EN1_Pin, GPIO_PIN_RESET);	// set data rs485 to rx
+
+
+	SPI1->CR1 &= ~SPI_CR1_SPE;//disable spi
+	SPI1->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BAUDRATEPRESCALER_64;
 	rxCount = 0;
-	rxCount2 = 0;
-	SPI->CR2 |= SPI_CR2_RXNEIE;
+	SPI1->CR2 |= SPI_CR2_RXNEIE;
 
-	SPI->CR1 |= SPI_CR1_SPE;//enable spi
+	SPI1->CR1 |= SPI_CR1_SPE;//enable spi
+}
+
+
+
+void startSPI2(){
+
+	SPI2->CR1 &= ~SPI_CR1_SPE;//disable spi
+	SPI2->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_CPHA | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BAUDRATEPRESCALER_32;
+
+
+	HAL_GPIO_WritePin(SPI2_EN1_GPIO_Port, SPI2_EN1_Pin, GPIO_PIN_SET);	// set data rs485 to tx
+
+
+
+	SPI2->CR1 |= SPI_CR1_BIDIOE;//enable output
+	SPI2->CR1 |= SPI_CR1_SPE;//enable spi
+
+	SPI2->DR = txData[0];
+	while(!(SPI2->SR & SPI_SR_TXE));
+	while(SPI2->SR & SPI_SR_BSY);
+
+	SPI2->CR1 &= ~SPI_CR1_BIDIOE;//disable output, this activates the clock
+
+	HAL_GPIO_WritePin(SPI2_EN1_GPIO_Port, SPI2_EN1_Pin, GPIO_PIN_RESET);	// set data rs485 to tx
+
+
+	SPI2->CR1 &= ~SPI_CR1_SPE;//disable spi
+	SPI2->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BAUDRATEPRESCALER_32;
+	rxCount2 = 0;
+	SPI2->CR2 |= SPI_CR2_RXNEIE;
+
+	SPI2->CR1 |= SPI_CR1_SPE;//enable spi
 }
 
 

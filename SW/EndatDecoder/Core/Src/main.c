@@ -97,8 +97,6 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
-  MX_TIM8_Init();
-  MX_TIM9_Init();
   MX_TIM13_Init();
   MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
@@ -118,8 +116,27 @@ int main(void)
 
   HAL_TIM_Base_Start_IT(&htim14);
 
+  HAL_TIM_Base_Start(&htim3);
+  HAL_TIM_OC_Start_IT(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_OC_Start_IT(&htim3, TIM_CHANNEL_2);
+
+  HAL_TIM_Base_Start(&htim4);
+  HAL_TIM_OC_Start_IT(&htim4, TIM_CHANNEL_1);
+  HAL_TIM_OC_Start_IT(&htim4, TIM_CHANNEL_2);
+
+uint16_t i = 100;
 while(1){
-	HAL_Delay(100);
+
+//	__HAL_TIM_SET_PRESCALER(&htim4, i++);
+	__HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_1, i / 4);
+	__HAL_TIM_SET_COMPARE(&htim4,TIM_CHANNEL_2, (3 * i / 4) );
+	__HAL_TIM_SET_AUTORELOAD(&htim4, i );
+
+	i= i + 100;
+
+
+
+	HAL_Delay(2);
 }
 
   /* USER CODE END 2 */
