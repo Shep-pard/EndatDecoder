@@ -99,7 +99,12 @@ int main(void)
   MX_USART3_UART_Init();
   MX_TIM8_Init();
   MX_TIM9_Init();
+  MX_TIM13_Init();
+  MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
+
+  SEGGER_SYSVIEW_Conf();
+
 
   uint8_t data[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
 
@@ -108,55 +113,30 @@ int main(void)
   txData[0] = 0b00011100;
   uint32_t abc = 0;
 
+  HAL_GPIO_WritePin(SPI1_EN2_GPIO_Port, SPI1_EN2_Pin, GPIO_PIN_SET);	// set clk  rr485 to tx
+  HAL_GPIO_WritePin(SPI2_EN2_GPIO_Port, SPI2_EN2_Pin, GPIO_PIN_SET);	// set clk  rr485 to tx
+
+  HAL_TIM_Base_Start_IT(&htim14);
+
+while(1){
+	HAL_Delay(100);
+}
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_WritePin(SPI1_EN1_GPIO_Port, SPI1_EN1_Pin, GPIO_PIN_SET);	// set data rs485 to tx
-	  HAL_GPIO_WritePin(SPI1_EN2_GPIO_Port, SPI1_EN2_Pin, GPIO_PIN_SET);	// set clk  rr485 to tx
-//	  HAL_SPI_Transmit(&hspi1, data, 10, 1000);
 
 
 
-	  SPI1->CR1 &= ~SPI_CR1_SPE;//disable spi
-	  SPI1->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_CPHA | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BAUDRATEPRESCALER_32;
-
-	  uint32_t bits = 8;
-
-	  HAL_GPIO_WritePin(SPI1_EN1_GPIO_Port, SPI1_EN1_Pin, GPIO_PIN_SET);	/ set data rs485 to tx
-	  SPI1->CR1 |= SPI_CR1_BIDIOE;//enable output
-	  SPI1->CR1 |= SPI_CR1_SPE;//enable spi
-
-	  for(int i = 0; i < (bits + 7) / 8; i++){
-	    SPI1->DR = txData[i];
-	    while(!(SPI1->SR & SPI_SR_TXE));
-	    while(SPI1->SR & SPI_SR_BSY);
-	  }
-
-	  SPI1->CR1 &= ~SPI_CR1_BIDIOE;//disable output, this activates the clock
-	  HAL_GPIO_WritePin(SPI1_EN1_GPIO_Port, SPI1_EN1_Pin, GPIO_PIN_RESET);	// set data rs485 to rx
-
-	  SPI1->CR1 &= ~SPI_CR1_SPE;//disable spi
-	    SPI1->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BAUDRATEPRESCALER_32;
-
-//	    SPI1->CR1 = SPI_CR1_LSBFIRST | SPI_CR1_MSTR | SPI_CR1_SSI | SPI_CR1_SSM | SPI_CR1_BIDIMODE | SPI_BaudRatePrescaler_32; // change cpol for delay comp
-
-	  SPI1->CR1 |= SPI_CR1_SPE;//enable spi
-
-	  for(int i = 0; i < 5; i++){
-	    while(!(SPI1->SR & SPI_SR_RXNE));
-	    rxData[i] = SPI1->DR;				// receive
-	  }
-
-	  while((SPI1->SR & SPI_SR_BSY) == SPI_SR_BSY){
-		  abc++;
-	  }
-	  SPI1->CR1 &= ~SPI_CR1_SPE; //disable spi
 
 
-	  HAL_Delay(500);
+
+
+
+
 
     /* USER CODE END WHILE */
 
